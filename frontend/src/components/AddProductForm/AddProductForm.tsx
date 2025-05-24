@@ -3,21 +3,37 @@ import { useState } from 'react';
 import type { ProcuctCondition } from '../../types';
 import styles from './AddProductForm.module.css';
 
+/**
+ * Props for the AddProductForm component.
+ * @property onAdd - Callback function called when a product is added.
+ * @property categories - Array of available product categories.
+ */
 interface AddProductFormProps {
 	onAdd: (product: { name: string; category: string; condition: ProcuctCondition }) => void;
 	categories: string[];
 }
 
+/**
+ * AddProductForm component allows users to input and submit a new product.
+ *
+ * @param onAdd - Function to call with the new product data when the form is submitted.
+ * @param categories - List of category options for the product.
+ * @returns The form JSX element.
+ */
 export default function AddProductForm({
 	onAdd,
 	categories,
 }: AddProductFormProps): JSX.Element {
 	const [name, setName] = useState('');
 	const [category, setCategory] = useState('');
-	const [condition, setCondition] = useState<'New' | 'LikeNew' | 'Good' | 'Fair' | 'Poor'>(
-		'Good'
-	);
+	const [condition, setCondition] = useState<
+		'New' | 'LikeNew' | 'Good' | 'Fair' | 'Poor'
+	>('Good');
 
+	/**
+	 * Handles form submission, calls onAdd with product data, and resets the form.
+	 * @param e - The form event.
+	 */
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 		onAdd({ name, category, condition });

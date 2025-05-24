@@ -3,12 +3,24 @@ import CookieConsent from 'react-cookie-consent';
 import { getCookieConsent, setCookieConsent } from '../../utils/cookieUtils';
 import styles from './CookieBanner.module.css';
 
+/**
+ * Consent settings for cookies.
+ * @property necessary - Whether necessary cookies are enabled (always true).
+ * @property analytics - Whether analytics cookies are enabled.
+ * @property marketing - Whether marketing cookies are enabled.
+ */
 interface ConsentSettings {
 	necessary: boolean;
 	analytics: boolean;
 	marketing: boolean;
 }
 
+/**
+ * CookieBanner component displays a GDPR-compliant cookie consent banner.
+ * Allows users to accept all cookies, decline all except necessary, or customize their preferences.
+ *
+ * @returns The cookie consent banner JSX element.
+ */
 const CookieBanner = (): JSX.Element => {
 	const [showSettings, setShowSettings] = useState(false);
 
@@ -25,6 +37,9 @@ const CookieBanner = (): JSX.Element => {
 		}
 	}, []);
 
+	/**
+	 * Handles accepting all cookie categories.
+	 */
 	const handleAcceptAll = () => {
 		const newConsent: ConsentSettings = {
 			necessary: true,

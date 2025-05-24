@@ -2,12 +2,26 @@ import type { JSX } from 'react';
 import { type Product, type ProcuctCondition } from '../../types';
 import styles from './ProductList.module.css';
 
+/**
+ * Props for the ProductList component.
+ * @property products - Array of products to display.
+ * @property onUpdateCondition - Callback to update a product's condition.
+ * @property onDelete - Callback to delete a product by id.
+ */
 interface ProductListProps {
 	products: Product[];
 	onUpdateCondition: (id: number, condition: ProcuctCondition) => void;
 	onDelete: (id: number) => void;
 }
 
+/**
+ * ProductList component displays a list of products with options to update their condition or delete them.
+ *
+ * @param products - Array of products to display.
+ * @param onUpdateCondition - Function to update a product's condition.
+ * @param onDelete - Function to delete a product by id.
+ * @returns The product list JSX element.
+ */
 export default function ProductList({
 	products,
 	onUpdateCondition,
