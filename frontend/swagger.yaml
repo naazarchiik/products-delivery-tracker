@@ -1,0 +1,124 @@
+openapi: 3.0.0
+info:
+  title: Products Delivery Tracker API
+  version: 1.0.0
+  description: API for managing products in the Products Delivery Tracker app
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+  /api/products:
+    get:
+      summary: Get all products
+      tags:
+        - Products
+      responses:
+        '200':
+          description: List of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+    post:
+      summary: Add a new product
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductInput'
+      responses:
+        '201':
+          description: Product created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '400':
+          description: Invalid input
+
+  /api/products/{id}:
+    patch:
+      summary: Update product condition
+      tags:
+        - Products
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Product ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                condition:
+                  type: string
+                  enum: [New, LikeNew, Good, Fair, Poor]
+      responses:
+        '200':
+          description: Product updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Product not found
+    delete:
+      summary: Delete a product
+      tags:
+        - Products
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Product ID
+      responses:
+        '204':
+          description: Product deleted
+        '404':
+          description: Product not found
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "MacBook Pro"
+        category:
+          type: string
+          example: "Laptop"
+        condition:
+          type: string
+          enum: [New, LikeNew, Good, Fair, Poor]
+          example: "Good"
+    ProductInput:
+      type: object
+      required:
+        - name
+        - category
+        - condition
+      properties:
+        name:
+          type: string
+        category:
+          type: string
+        condition:
+          type: string
+          enum: [New, LikeNew, Good, Fair, Poor]
