@@ -1,6 +1,6 @@
 export type ProductCategory = 'Laptop' | 'Phone' | 'Tablet';
 
-export interface Skill {
+export interface Product {
 	id: number;
 	name: string;
 	quantity: string;
