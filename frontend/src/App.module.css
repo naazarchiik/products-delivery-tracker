@@ -123,7 +123,7 @@ h1::after {
 	background: #e9ecef;
 }
 
-.skillList {
+.productList {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	gap: 1.5rem;
@@ -131,7 +131,7 @@ h1::after {
 	list-style: none;
 }
 
-.skillItem {
+.productItem {
 	background: white;
 	padding: 1.5rem;
 	border-radius: var(--border-radius);
@@ -142,26 +142,26 @@ h1::after {
 	flex-direction: column;
 }
 
-.skillItem:hover {
+.productItem:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.skillHeader {
+.productHeader {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	margin-bottom: 1rem;
 }
 
-.skillName {
+.productName {
 	font-size: 1.25rem;
 	font-weight: 600;
 	margin: 0;
 	color: var(--secondary);
 }
 
-.skillCategory {
+.productCategory {
 	background: var(--primary-light);
 	color: white;
 	padding: 0.25rem 0.75rem;
@@ -170,7 +170,7 @@ h1::after {
 	font-weight: 600;
 }
 
-.skillLevel {
+.productCondition {
 	display: inline-block;
 	padding: 0.25rem 0.75rem;
 	border-radius: 20px;
@@ -179,22 +179,22 @@ h1::after {
 	margin-top: 0.5rem;
 }
 
-.levelBeginner {
+.conditionNew {
 	background: #fff3bf;
 	color: #f08c00;
 }
 
-.levelIntermediate {
+.conditionLikeNew {
 	background: #d0ebff;
 	color: #1971c2;
 }
 
-.levelAdvanced {
+.conditionGood {
 	background: #d3f9d8;
 	color: #2b8a3e;
 }
 
-.skillActions {
+.productActions {
 	display: flex;
 	gap: 0.75rem;
 	margin-top: auto;
@@ -249,7 +249,7 @@ h1::after {
 		grid-template-columns: 1fr;
 	}
 
-	.skillList {
+	.productList {
 		grid-template-columns: 1fr;
 	}
 }
