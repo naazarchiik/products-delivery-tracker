@@ -1,0 +1,43 @@
+.container {
+	font-family: 'Arial', sans-serif;
+	color: white;
+	padding: 15px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.settingsSection {
+	margin: 20px 0;
+}
+
+.option {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+.checkbox {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.settingsButton {
+	background: transparent;
+	border: none;
+	color: #4e503b;
+	text-decoration: underline;
+	cursor: pointer;
+	margin: 10px 0;
+	font-size: 0.9rem;
+}
+
+.privacyText {
+	margin-top: 20px;
+	font-size: 0.9rem;
+}
+
+.privacyLink {
+	color: #4e503b;
+	text-decoration: underline;
+}
