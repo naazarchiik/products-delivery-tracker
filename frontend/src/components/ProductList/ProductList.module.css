@@ -1,0 +1,75 @@
+.productList {
+    list-style: none;
+    padding: 0;
+}
+
+.productItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.productInfo {
+    flex: 1;
+}
+
+.productActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.category {
+    background: #e0e0e0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.category {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.laptop {
+    background: #ff9800;
+}
+
+.phone {
+    background: #2196f3;
+}
+
+.tablet {
+    background: #4caf50;
+}
+
+.deleteButton {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background: #d32f2f;
+}
