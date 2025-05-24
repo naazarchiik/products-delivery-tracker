@@ -1,0 +1,21 @@
+{
+	"source": {
+		"include": ["src"],
+		"includePattern": ".(js|ts|jsx|tsx)$"
+	},
+	"plugins": ["plugins/markdown", "node_modules/jsdoc-tsimport-plugin"],
+	"opts": {
+		"destination": "docs",
+		"recurse": true,
+		"readme": "README.md",
+		"template": "default",
+		"encoding": "utf8"
+	},
+	"tags": {
+		"allowUnknownTags": true
+	},
+	"templates": {
+		"cleverLinks": true,
+		"monospaceLinks": true
+	}
+}
