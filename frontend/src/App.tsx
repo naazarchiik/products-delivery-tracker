@@ -105,7 +105,6 @@ function App() {
 
 	return (
 		<div className={styles.app}>
-			<h1>My Products Tracker</h1>
 			<ProductFilter
 				categories={categories}
 				selectedCategories={selectedCategories}

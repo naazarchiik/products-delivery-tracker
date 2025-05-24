@@ -50,7 +50,7 @@
 }
 
 .conditionSelect {
-    background: greenyellow;
+    background: rgb(81, 202, 218);
 }
 
 .new {
@@ -74,7 +74,7 @@
 }
 
 .deleteButton {
-    background: #f44336;
+    background: #342221;
     color: white;
     border: none;
     padding: 0.5rem;

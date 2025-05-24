@@ -114,7 +114,7 @@ const CookieBanner = (): JSX.Element => {
 					type='button'
 					onClick={() => setShowSettings(!showSettings)}
 					className={styles.settingsButton}
-				></button>
+				>Зберегти вибір</button>
 			</div>
 		</CookieConsent>
 	);
