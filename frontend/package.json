@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "express": "^5.1.0",
+    "http-server": "^14.1.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-cookie-consent": "^9.0.0",
+    "react-dom": "^19.1.0",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
