@@ -42,23 +42,35 @@
     font-size: 0.8rem;
 }
 
-.category {
+.condition {
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
     color: white;
 }
 
-.laptop {
-    background: #ff9800;
+.conditionSelect {
+    background: greenyellow;
 }
 
-.phone {
+.new {
+    background: #d2bc9a;
+}
+
+.likenew {
     background: #2196f3;
 }
 
-.tablet {
+.good {
     background: #4caf50;
+}
+
+.fair {
+    background: #f44336;
+}
+
+.poor {
+    background: #710755;
 }
 
 .deleteButton {

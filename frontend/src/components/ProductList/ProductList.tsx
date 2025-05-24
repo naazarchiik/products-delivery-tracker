@@ -1,46 +1,55 @@
 import type { JSX } from 'react';
-import { type Product, type ProductCategory } from '../../types';
+import { type Product, type ProcuctCondition } from '../../types';
 import styles from './ProductList.module.css';
 
 interface ProductListProps {
 	products: Product[];
-	onUpdateCategory: (id: number, category: ProductCategory) => void;
+	onUpdateCondition: (id: number, condition: ProcuctCondition) => void;
 	onDelete: (id: number) => void;
 }
 
 export default function ProductList({
 	products,
-	onUpdateCategory,
+	onUpdateCondition,
 	onDelete,
 }: ProductListProps): JSX.Element {
-	const categories: ProductCategory[] = ['Laptop', 'Phone', 'Tablet'];
+	const conditions: ProcuctCondition[] = [
+		'New',
+		'LikeNew',
+		'Good',
+		'Fair',
+		'Poor',
+	];
 
 	return (
-		<ul className={styles.ProductCategory}>
+		<ul className={styles.productList}>
 			{products.map((product) => (
 				<li key={product.id} className={styles.productItem}>
 					<div className={styles.productInfo}>
 						<h3>{product.name}</h3>
 						<span className={styles.category}>{product.category}</span>
 						<span
-							className={`${styles.category} ${
-								styles[product.category.toLowerCase()]
+							className={`${styles.condition} ${
+								styles[product.condition.toLowerCase()]
 							}`}
 						>
-							{product.category}
+							{product.condition}
 						</span>
 					</div>
 					<div className={styles.productActions}>
 						<select
-							value={product.category}
+							value={product.condition}
 							onChange={(e) =>
-								onUpdateCategory(product.id, e.target.value as ProductCategory)
+								onUpdateCondition(
+									product.id,
+									e.target.value as ProcuctCondition
+								)
 							}
-							className={styles.categorySelect}
+							className={styles.conditionSelect}
 						>
-							{categories.map((category) => (
-								<option key={category} value={category}>
-									{category}
+							{conditions.map((condition) => (
+								<option key={condition} value={condition}>
+									{condition}
 								</option>
 							))}
 						</select>

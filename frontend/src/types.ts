@@ -1,8 +1,8 @@
-export type ProductCategory = 'Laptop' | 'Phone' | 'Tablet';
+export type ProcuctCondition = 'New' | 'LikeNew' | 'Good' | 'Fair' | 'Poor';
 
 export interface Product {
 	id: number;
 	name: string;
-	quantity: string;
-	category: ProductCategory;
+	condition: ProcuctCondition;
+	category: string;
 }
