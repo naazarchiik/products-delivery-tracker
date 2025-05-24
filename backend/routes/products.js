@@ -15,10 +15,10 @@ router.post('/', (req, res) => {
 
 router.patch('/:id', (req, res) => {
 	const { id } = req.params;
-	const { category } = req.body;
+	const { condition } = req.body;
 	const product = products.find((s) => s.id === parseInt(id));
 	if (product) {
-		product.category = category;
+		product.condition = condition;
 		res.json(product);
 	} else {
 		res.status(404).json({ error: 'Product not found' });
