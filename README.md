@@ -141,7 +141,7 @@ cd frontend
 Run these inside the `backend/` directory:
 
 ```bash
-cd frontend
+cd backend
 ```
 
 ### Code Documentation
