@@ -6,7 +6,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node index.js",
 		"docs": "jsdoc -c jsdoc.json",
-		"docs:serve": "http-server ./docs -p 5000"
+		"docs:serve": "http-server ./docs -p 5000",
+		"swagger": "node swagger-server.cjs"
 	},
 	"keywords": [],
 	"author": "Nazarii Kryvolap",
